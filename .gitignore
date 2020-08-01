@@ -1,0 +1,9 @@
+application/databases/Application/Log/View/
+application/databases/Application/notification.xml
+application/databases/Application/*.backup
+application/databases/NativeApp/Authenticate
+application/databases/PageCarton/Cron/Run/
+application/modules/NativeApp.php
+application/modules/NativeApp/
+extensions/
+application/databases/Ayoola/Object/dbase.xml
