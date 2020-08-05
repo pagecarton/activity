@@ -29,7 +29,7 @@ class Application_Activity_Delete extends Application_Activity_Abstract
 		{ 
             if( ! $userInfo = $this->authenticate() )
             {
-                return NativeApp_Authenticate::setUnauthorized();
+                return $this->setUnauthorized();
             }
             if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
                 

@@ -36,7 +36,7 @@ class Application_Activity_ShowAll extends Application_Activity_Abstract
     {
         if( ! $userInfo = $this->authenticate() )
         {
-            return NativeApp_Authenticate::setUnauthorized();
+            return $this->setUnauthorized();
         }
         if( ! empty( $_GET['activity_user_id'] ) )
         {

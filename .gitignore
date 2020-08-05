@@ -7,3 +7,8 @@ application/modules/NativeApp.php
 application/modules/NativeApp/
 extensions/
 application/databases/Ayoola/Object/dbase.xml
+application/databases/Application/settings.xml
+application/databases/Application/activity.xml
+application/databases/Ayoola/Access/localuser.xml
+application/databases/Ayoola/Doc/table.xml
+application/databases/Application/Profile/table.xml
