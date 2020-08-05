@@ -40,9 +40,7 @@ class Application_Activity_Creator extends Application_Activity_Abstract
                 //  Code that runs the widget goes here...
                 if( ! $userInfo = $this->authenticate() )
                 {
-                //    $this->_objectData['debug'][] = $_SERVER;
-                    $this->_objectData['badnews'] = 'Auth is false';
-                    return false;
+                    return NativeApp_Authenticate::setUnauthorized();
                 }
                 if( empty( $_POST['text'] ) )
                 {

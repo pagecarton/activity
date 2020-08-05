@@ -36,12 +36,15 @@ class Application_Activity_ShowAll extends Application_Activity_Abstract
     {
         if( ! $userInfo = $this->authenticate() )
         {
-            $this->_objectData['badnews'] = 'Auth is false';
-            return false;
+            return NativeApp_Authenticate::setUnauthorized();
         }
-        if( ! empty( $_POST['activity_user_id'] ) )
+        if( ! empty( $_GET['activity_user_id'] ) )
         {
-            $this->_dbWhereClause['user_id'] = $_POST['activity_user_id'];                     
+            $this->_dbWhereClause['user_id'] = $_GET['activity_user_id'];                     
+        }
+        if( ! empty( $_GET['profile_url'] ) )
+        {
+            $this->_dbWhereClause['profile_url'] = $_GET['profile_url'];                     
         }
         $this->_objectData = $this->getDbData();       
     }
