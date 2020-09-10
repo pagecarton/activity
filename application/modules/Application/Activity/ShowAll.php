@@ -50,7 +50,10 @@ class Application_Activity_ShowAll extends Application_Activity_Abstract
         {
             $this->_dbWhereClause['tagged_profiles'] = $_GET['tagged_profiles'];                     
         }
-        $this->_dbSelectOptions['where_join_operator'] = '||';
+        if( strtolower( $_REQUEST['where_join_operator'] ) !== 'and' )
+        {
+            $this->_dbSelectOptions['where_join_operator'] = '||';
+        }
     //    var_export( $this->_dbWhereClause );
         $this->_objectData = $this->getDbData();       
     }
